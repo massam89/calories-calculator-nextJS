@@ -25,8 +25,9 @@ export default function CaloriesCalculator({getCalculatedDate}) {
   }
 
   return (
-    <form onSubmit={onSubmitHandler}>
-      <FieldSet title='Choose one of them:'>
+    <form onSubmit={onSubmitHandler} >
+
+      <FieldSet title='Choose one of them'>
         <Inputs {...config.maleRadioBtnProps} />
         <Inputs {...config.femaleRadioBtnProps} />
       </FieldSet>
@@ -35,7 +36,7 @@ export default function CaloriesCalculator({getCalculatedDate}) {
       <Inputs {...config.weightProps} />
       <Inputs {...config.heightProps} />
 
-      <FieldSet title='Choose one of them:'>
+      <FieldSet title='Choose one of them'>
         <Inputs {...config.noExercise} />
         <Inputs {...config.lightExercise} />
         <Inputs {...config.moderateExercise} />

@@ -9,8 +9,11 @@ export default function Home() {
   }
 
   return (
-    <main>
-      <CaloriesCalculator getCalculatedDate={calculatedDataHandler} />
+    <main className='flex justify-center h-full items-center'>
+      <CaloriesCalculator 
+        getCalculatedDate={calculatedDataHandler}
+        
+      />
     </main>
   )
 }
