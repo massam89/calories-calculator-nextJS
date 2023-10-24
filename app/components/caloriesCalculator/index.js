@@ -1,5 +1,6 @@
 'use client'
 
+import Swal from "sweetalert2";
 import FieldSet from "../fieldSet";
 import Inputs from "../inputs/Inputs";
 import calculateCalories from "./calculateCalories";
@@ -21,6 +22,8 @@ export default function CaloriesCalculator({getCalculatedDate}) {
     if(Object.values(parameters).every((v) => v)){
       const calculateData = calculateCalories(parameters)
       getCalculatedDate(calculateData);
+    }else{
+      Swal.fire('Fill all inputs')
     }
   }
 

@@ -1,18 +1,18 @@
 'use client'
 
 import CaloriesCalculator from "./components/caloriesCalculator";
+import Swal from "sweetalert2";
 
 export default function Home() {
 
-  const calculatedDataHandler = (calculatedDate) => {
-    
+  const calculatedCaloriesHandler = (data) => {
+    Swal.fire(`${Math.round(data).toString()} KCal`)
   }
 
   return (
-    <main className='flex justify-center h-full items-center'>
+    <main className='flex justify-center'>
       <CaloriesCalculator 
-        getCalculatedDate={calculatedDataHandler}
-        
+        getCalculatedDate={calculatedCaloriesHandler}
       />
     </main>
   )
