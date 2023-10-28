@@ -1,54 +1,49 @@
-'use client'
+"use client";
 
-import Swal from "sweetalert2";
 import FieldSet from "../fieldSet";
 import Inputs from "../inputs/Inputs";
 import calculateCalories from "./calculateCalories";
-import config from "./config";
 
-export default function CaloriesCalculator({getCalculatedDate}) {
+export default function CaloriesCalculator({getCalculatedDate, configAndStyle}) {
 
   const onSubmitHandler = (e) => {
-    e.preventDefault()
+    e.preventDefault();
 
     const parameters = {
       age: e.target.age.value,
       weight: e.target.weight.value,
       height: e.target.height.value,
-      activity: Array.from(e.target.activity).find(item => item.checked === true)?.value,
-      gender: Array.from(e.target.gender).find(item => item.checked === true)?.value
-    }
-    
-    if(Object.values(parameters).every((v) => v)){
-      const calculateData = calculateCalories(parameters)
+      activity: Array.from(e.target.activity).find((item) => item.checked === true)?.value,
+      gender: Array.from(e.target.gender).find((item) => item.checked === true)?.value};
+
+    if (Object.values(parameters).every((v) => v)) {
+      const calculateData = calculateCalories(parameters);
       getCalculatedDate(calculateData);
-    }else{
-      Swal.fire('Fill all inputs')
+    } else {
+      alert("Fill all inputs!");
     }
-  }
+  };
 
   return (
-    <form onSubmit={onSubmitHandler} >
-
-      <FieldSet title='Choose one of them'>
-        <Inputs {...config.maleRadioBtnProps} />
-        <Inputs {...config.femaleRadioBtnProps} />
+    <form onSubmit={onSubmitHandler} {...configAndStyle.form} >
+      <FieldSet title="Choose one of them" >
+        <Inputs {...configAndStyle.maleRadioBtnProps} />
+        <Inputs {...configAndStyle.femaleRadioBtnProps} />
       </FieldSet>
 
-      <Inputs {...config.ageProps} />
-      <Inputs {...config.weightProps} />
-      <Inputs {...config.heightProps} />
+      <Inputs {...configAndStyle.ageProps} />
+      <Inputs {...configAndStyle.weightProps} />
+      <Inputs {...configAndStyle.heightProps} />
 
-      <FieldSet title='Choose one of them'>
-        <Inputs {...config.noExercise} />
-        <Inputs {...config.lightExercise} />
-        <Inputs {...config.moderateExercise} />
-        <Inputs {...config.hardExercise} />
-        <Inputs {...config.veryHardExercise} />
+      <FieldSet title="Choose one of them">
+        <Inputs {...configAndStyle.noExercise} />
+        <Inputs {...configAndStyle.lightExercise} />
+        <Inputs {...configAndStyle.moderateExercise} />
+        <Inputs {...configAndStyle.hardExercise} />
+        <Inputs {...configAndStyle.veryHardExercise} />
       </FieldSet>
 
-      <button type="submit">Calculate</button>
-
+      <button type="submit" {...configAndStyle.button} >Calculate</button>
     </form>
   );
 }

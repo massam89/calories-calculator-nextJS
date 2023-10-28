@@ -7,8 +7,8 @@ export default function Inputs({
 
   return (
     <div className={containerClassnames}>
-      <label {...labelAttributes}>{inputName}</label>
       <input {...inputAttributes} />
+      <label {...labelAttributes}>{inputName}</label>
     </div>
   );
 }
