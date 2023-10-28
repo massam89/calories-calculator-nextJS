@@ -31,7 +31,7 @@ const maleRadioBtnProps = {
   };
   
   const ageProps = {
-    containerClassnames: 'my-2',
+    containerClassnames: 'mt-2',
     inputName: "",
     inputAttributes: {
       type: "number",
@@ -39,19 +39,19 @@ const maleRadioBtnProps = {
       min: 1,
       max: 100,
       placeholder: 'age',
-      className: "bg-gray-100 border border-gray-300 text-gray-900 text-sm rounded-lg w-full pl-3 p-2.5"
+      className: "bg-gray-200 border border-gray-300 text-gray-900 text-sm rounded-lg w-full pl-3 p-2"
     },
   };
   
   const weightProps = {
-    containerClassnames: 'my-2',
+    containerClassnames: 'mt-2',
     inputName: "",
     inputAttributes: {
       type: "number",
       name: "weight",
       min: 1,
       placeholder: 'Weight(kg)',
-      className: "bg-gray-100 border border-gray-300 text-gray-900 text-sm rounded-lg w-full pl-3 p-2.5"
+      className: "bg-gray-200 border border-gray-300 text-gray-900 text-sm rounded-lg w-full pl-3 p-2"
     },
   };
   
@@ -63,7 +63,7 @@ const maleRadioBtnProps = {
       name: "height",
       min: 1,
       placeholder: 'Height(kg)',
-      className: "bg-gray-100 border border-gray-300 text-gray-900 text-sm rounded-lg w-full pl-3 p-2.5"
+      className: "bg-gray-200 border border-gray-300 text-gray-900 text-sm rounded-lg w-full pl-3 p-2"
     },
   };
   
@@ -148,7 +148,7 @@ const maleRadioBtnProps = {
   };
   
   const button = {
-    className: 'mt-10 text-white bg-blue-700 hover:bg-blue-800 focus:ring-1 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800'
+    className: 'mt-5 text-white bg-blue-700 hover:bg-blue-800 focus:ring-1 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800'
   }
   
   const form = {
