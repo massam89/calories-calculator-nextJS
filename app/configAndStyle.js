@@ -154,8 +154,8 @@ const maleRadioBtnProps = {
   const form = {
     className: "flex flex-col"
   }
-  
-  export default {
+
+  const output = {
     noExercise,
     lightExercise,
     moderateExercise,
@@ -169,4 +169,6 @@ const maleRadioBtnProps = {
     button,
     form
   };
+  
+  export default output
   
